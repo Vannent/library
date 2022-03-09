@@ -34,6 +34,7 @@ header {
 .logo:hover {
     color: #75EDBF;
     transform: scale(1.05);
+    transition: transform 330ms ease-in-out;
 }
 
 button {
@@ -62,7 +63,8 @@ button {
 
 .nav button:hover {
     background-color: #75EDBF;
-    color: #F7F7F7;
+    transform: scale(1.1);
+    transition: transform 330ms ease-in-out;
 }
 
 .profile-buttons {
@@ -71,14 +73,106 @@ button {
 
 .profile-buttons button:hover {
     filter: invert(84%) sepia(10%) saturate(1539%) hue-rotate(102deg) brightness(100%) contrast(92%);
-    transform: scale(1.1);
+    transform: scale(1.2);
+    transition: transform 330ms ease-in-out;
 }
 
 
 main {
-    height: 90vh;
+    height: 87vh;
     margin: 0px 100px;
     margin-top: 20px;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+}
+
+.main-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.main-card .title {
+    text-transform: uppercase;
+    font-size: 4em;
+    margin: 0px 0px;
+    color: #75EDBF;
+    text-shadow: 1px 1px 5px #3d3d3d15;
+}
+
+.main-card .content {
+    font-style: italic;
+    margin-top: 0px;
+    margin-bottom: 150px;
+}
+
+.book-cards {
+    background-color: #3d3d3d28;
+    border-radius: 30px;
+    margin: 20px;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(33.33%, 1fr));
+    grid-template-rows: repeat(2, minmax(33.33%, 1fr));
+    align-items: center;
+    justify-items: center;    
+    max-height: 560px;
+    overflow: hidden;
+}
+
+.book-card {
+    background-color: #f7f7f7a4;
+    border-radius: 15px;
+    padding: 10px;
+    margin: 5px;
+    min-width: 100px;
+    width: 250px;
+    max-width: 366px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+}
+
+.book-card:hover {
+    transform: scale(1.1);
+    transition: transform 330ms ease-in-out;
+    box-shadow: 1px 1px 5px #3d3d3d17;
+}
+
+.book-title {
+    font-size: 1.8em;
+    font-weight: 600;
+    padding: 0px 20px;
+    padding-top: 20px;
+    padding-bottom: 5px;
+    text-transform: uppercase;
+}
+
+.author {
+    padding: 0px 20px;
+}
+
+.book-buttons {
+    padding-top: 50px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    gap: 20px;
+}
+
+.book-buttons button {
+    border-radius: 50px;
+    height: 30px;
+    width: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.book-buttons button:hover {
+    filter: invert(84%) sepia(10%) saturate(1539%) hue-rotate(102deg) brightness(100%) contrast(92%);
+    transform: scale(1.1);
+    transition: transform 330ms ease-in-out;
 }
 
 footer {

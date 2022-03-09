@@ -77,12 +77,14 @@ button {
 
 main {
     height: 90vh;
+    margin: 0px 100px;
+    margin-top: 20px;
 }
 
 footer {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 5vh;
-    background-color: #dfdede;
+    height: 25px;
+    font-weight: 600;
 }

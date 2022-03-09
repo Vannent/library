@@ -124,10 +124,6 @@ main {
     border-radius: 15px;
     padding: 10px;
     margin: 5px;
-    min-width: 100px;
-    width: 250px;
-    max-width: 366px;
-    height: 200px;
     display: flex;
     flex-direction: column;
 }

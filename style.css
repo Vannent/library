@@ -116,7 +116,6 @@ main {
     grid-template-rows: repeat(2, minmax(33.33%, 1fr));
     align-items: center;
     justify-items: center;    
-    max-height: 560px;
     overflow: hidden;
 }
 

@@ -8,7 +8,7 @@ addBook.addEventListener("click", (e) => openForm())
 cancelButton.addEventListener("click", (e) => closeForm())
 markRead.addEventListener("click", (e) => readBook())
 markUnread.addEventListener("click", (e) => unreadBook())
-removeBook.addEventListener("click", (e) => removeBook())
+removeBook.addEventListener("click", (e) => deleteBook())
 
 
 function openForm() {
@@ -29,8 +29,8 @@ function unreadBook() {
     document.querySelector(".book-card").style.backgroundColor = "#f7f7f7a4";
 }
 
-function removeBook() {
-    
+function deleteBook() {
+
 }
 
 let myLibrary = []

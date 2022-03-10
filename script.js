@@ -4,13 +4,11 @@ const markUnread = document.getElementById("unread-button");
 const removeBook = document.getElementById("delete-button");
 const cancelButton = document.getElementById("cancel-button")
 
-addBook.addEventListener("click", function() {
-    openForm();
-})
-
-cancelButton.addEventListener("click", function() {
-    closeForm()
-})
+addBook.addEventListener("click", (e) => openForm())
+cancelButton.addEventListener("click", (e) => closeForm())
+markRead.addEventListener("click", (e) => readBook())
+markUnread.addEventListener("click", (e) => unreadBook())
+removeBook.addEventListener("click", (e) => removeBook())
 
 
 function openForm() {
@@ -23,10 +21,23 @@ function closeForm() {
     document.querySelector(".cover").style.display = "none";
 }
 
+function readBook() {
+    document.querySelector(".book-card").style.backgroundColor = "#75EDBF";
+}
+
+function unreadBook() {
+    document.querySelector(".book-card").style.backgroundColor = "#f7f7f7a4";
+}
+
+function removeBook() {
+    
+}
+
 let myLibrary = []
 
-function Book() {
-
+function Book(name, author) {
+    this.name = name
+    this.author = author
 }
 
 function addBookToLibrary() {

@@ -126,6 +126,9 @@ main {
     margin: 5px;
     display: flex;
     flex-direction: column;
+    width: 250px;
+    height: 200px;
+
 }
 
 .book-card:hover {

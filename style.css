@@ -112,8 +112,8 @@ main {
     margin: 20px;
     padding: 20px;
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(33.33%, 1fr));
-    grid-template-rows: repeat(2, minmax(33.33%, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(33.33%, 1fr));
+    grid-template-rows: repeat(2, minmax(270px, 1fr));
     align-items: center;
     justify-items: center;    
     overflow: hidden;
@@ -178,6 +178,15 @@ footer {
     font-weight: 600;
 }
 
+.cover {
+    background-color:black;
+    width:100vw;
+    height:100vh;
+    display:none;
+    position:fixed;
+    opacity: 30%;
+}
+
 .form-popup {
     display: none;
     flex-direction: column;
@@ -187,7 +196,9 @@ footer {
     height: 200px;
     width: 350px;
     padding: 10px 20px;
+    padding-bottom: 20px;
     position: absolute;
+    top: 50%;
     bottom: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
@@ -218,6 +229,12 @@ button.form-btn {
     border-radius: 20px;
     font-weight: 500;
     color: #3d3d3d;
+}
+
+button.form-btn:hover {
+    transform: scale(1.1);
+    transition: transform 330ms ease-in-out;
+    box-shadow: 1px 1px 5px #3d3d3d17;
 }
 
 input {
